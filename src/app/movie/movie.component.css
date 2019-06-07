@@ -1,8 +1,7 @@
 mat-toolbar{
     line-height: 50px;
 }
-mat-icon{
-    color: red;
+mat-toolbar img{
     margin: 5px;
     line-height: 50px;
 }
@@ -49,6 +48,33 @@ button a{
     color: black;
     text-decoration: none;
 }
+.mat-form-field-appearance-outline .mat-form-field-outline .mat-primary{
+    color: black !important;
+}
 h1{
     text-align: center;
+}
+
+@media screen and (max-width: 1340px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    input{
+        width: 30%;
+        height: 30px;
+    }
+    mat-card{
+        width: 300px;
+        margin: 5px auto;
+    }
 }

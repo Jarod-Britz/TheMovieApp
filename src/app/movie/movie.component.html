@@ -1,0 +1,23 @@
+
+<div class="row">
+    <div class="col">
+      <input type="text" placeholder="Search..." [(ngModel)]="movieName">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let movie of movies" [value]="movie">
+            {{movie.title}}
+          </mat-option>
+        </mat-autocomplete>
+      <button mat-stroked-button (click)="search()">Search</button>
+    </div>
+  </div>
+<h1>Results</h1>
+<div class="row container" >
+    <mat-card class="col" 
+    *ngFor="let movie of movies" 
+    [routerLink]="['movie-detail',  movie.id]"
+   >
+    <span>{{movieName.title}}</span>
+        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="image">
+        
+</mat-card>
+</div>
